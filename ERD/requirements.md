@@ -107,6 +107,4 @@ This ERD captures all entities, their attributes, and relationships.
 
 ### **3. ER Diagram**
 
-```markdown
 ![AirBnB ER Diagram](./air_bnb_database.jpg)
-```
