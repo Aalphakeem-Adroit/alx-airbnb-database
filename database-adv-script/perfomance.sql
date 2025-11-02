@@ -29,6 +29,7 @@ LEFT JOIN
     Payment pay ON b.booking_id = pay.booking_id
 WHERE 
     b.status = 'confirmed'
+    AND b.total_price > 0
 ORDER BY 
     b.created_at DESC;
 
@@ -64,6 +65,7 @@ LEFT JOIN
     Payment pay ON b.booking_id = pay.booking_id
 WHERE 
     b.status = 'confirmed'
+    AND b.total_price > 0
 ORDER BY 
     b.created_at DESC;
 
@@ -98,5 +100,6 @@ LEFT JOIN
     Payment pay ON b.booking_id = pay.booking_id
 WHERE 
     b.status = 'confirmed'
+    AND b.total_price > 0
 ORDER BY 
     b.created_at DESC;
