@@ -28,3 +28,16 @@ CREATE INDEX idx_booking_property_id ON Booking (property_id);
 -- Before creating indexes, run:
 -- EXPLAIN SELECT * FROM Booking WHERE user_id = 'some_user_id';
 -- After creating indexes, run the same command again and observe reduced query cost/time.
+
+
+-- Before Index
+
+EXPLAIN SELECT * FROM Booking WHERE user_id = '123';
+
+-- Output should show **full table scan** — MySQL has to read every row.
+
+
+
+-- After Index
+
+EXPLAIN SELECT * FROM Booking WHERE user_id = '123';
