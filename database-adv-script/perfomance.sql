@@ -27,6 +27,8 @@ INNER JOIN
     Property p ON b.property_id = p.property_id
 LEFT JOIN 
     Payment pay ON b.booking_id = pay.booking_id
+WHERE 
+    b.status = 'confirmed'
 ORDER BY 
     b.created_at DESC;
 
@@ -60,6 +62,8 @@ INNER JOIN
     Property p ON b.property_id = p.property_id
 LEFT JOIN 
     Payment pay ON b.booking_id = pay.booking_id
+WHERE 
+    b.status = 'confirmed'
 ORDER BY 
     b.created_at DESC;
 
@@ -92,5 +96,7 @@ JOIN
     Property p ON b.property_id = p.property_id
 LEFT JOIN 
     Payment pay ON b.booking_id = pay.booking_id
+WHERE 
+    b.status = 'confirmed'
 ORDER BY 
     b.created_at DESC;
