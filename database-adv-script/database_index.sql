@@ -34,6 +34,8 @@ CREATE INDEX idx_booking_property_id ON Booking (property_id);
 
 EXPLAIN SELECT * FROM Booking WHERE user_id = '123';
 
+ANALYZE SELECT * FROM Booking WHERE user_id = '123';
+
 -- Output should show **full table scan** — MySQL has to read every row.
 
 
@@ -41,3 +43,5 @@ EXPLAIN SELECT * FROM Booking WHERE user_id = '123';
 -- After Index
 
 EXPLAIN SELECT * FROM Booking WHERE user_id = '123';
+
+ANALYZE SELECT * FROM Booking WHERE user_id = '123';
